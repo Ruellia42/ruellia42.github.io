@@ -2,11 +2,11 @@
 /* ---------------------------- */
 body {
   font:
-    1em/150% "Helvetica", /*em = font-related unit*/
+    1em/150% "Helvetica", /*em = font-related unit* - relative to font size of own element; rem is always relative to root font*/
     "Arial",
     sans-serif;
   padding: 1em;
-  margin: 0 auto;
+  margin: 0 auto; /*shorthand properties WITHOUT comma inbetween*/
   max-width: 33em;
 }
 
@@ -44,4 +44,28 @@ div p + p { /*element inside a p directly following a p which is inside a div*/
   height: 100px;
   background-color: rebeccapurple;
   transform: rotate(0.8turn);
+}
+
+ /*to apply a different style to a class according to context*/
+
+span.highlight {
+  background-color: yellow;
+}
+
+h1.highlight {
+  background-color: pink;
+}
+
+/*styling IDs - IDs are unique!*/
+
+#one {
+  background-color: yellow;
+}
+
+h1#heading {
+  color: rebeccapurple;
+}
+
+article *:first-child { /*universal selector * means "any"*/
+  font-weight: bold;
 }
